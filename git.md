@@ -94,9 +94,19 @@ ex) git branch --set-upstream-to origin/youngjae
 * git checkout connect-youngjae
 * git branch --set-upstream-to origin/youngjae
 * git pull origin youngjae
-* touch app.js
+* app.js 들어가봅니다.
 * console.log("youngjae"); 을 더 써넣습니다.
-* git 
+* git add .
+* git status
+* git commit -m "md+"
+* git push origin youngjae
+<br> 이거 하면 everthing up-to-date라고 뜨면서 아무것도 해주지 않습니다. 왜일까요?
+<br> 그 이유는, 원래는 로컬 브랜치랑 깃헙 레파지토리측 브랜치 이름이 같은 거를 먼저 해줍니다. 그래서 그런 것입니다. 그래서 이럴 땐,
+* git push
+<br>
+해보면 안내문이 뜨는데, 여기서,
+*git push origin HEAD:youngjae
+<br>로 하라고 합니다. 이렇게 하면됩니다.
 
 
 
