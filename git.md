@@ -108,7 +108,11 @@ ex) git branch --set-upstream-to origin/youngjae
 *git push origin HEAD:youngjae
 <br>로 하라고 합니다. 이렇게 하면됩니다. 이 방법은, 사실 어느 브랜치든간에, 올리고 싶은 깃헙측 레파지토리가 있는데 지금 내가 그 레파지토리와는 이름이 다른, 다른 브랜치에 있을 때, 체크아웃되어 있는 현재의 나의 로컬 브랜치 내용을, 브랜치 영역 초월해서 업로딩해버릴 수 있는 명령어이기도 합니다.
 
-## 자그럼, 이로써 우리는 로컬 브랜치 connect-youngjae 라는 놈을 만들었고? 그리고 얘를 깃헙 브랜치인 youngjae와 연결짓는 한편, connect-youngjae가 체크아웃 되어 있는 상태에서, 즉 그 브랜치에 들어와 있는 상태에서 깃헙 브랜치 youngjae 내용을 고대로 git pull origin youngjae로 불러와서? 비쥬얼 코드에 띄운 다음?, app.js에서 수정을 하고, git add . git commit 이런 걸 다하고? 다시 원래 가져왔던 브랜치인 깃헙측 브랜치인 youngjae에 다시 업로딩하는것까지 해보았습니다!
+## 자그럼, 이로써 우리는 로컬 브랜치 connect-youngjae 라는 놈을 만들었고? 그리고 얘를 깃헙 브랜치인 youngjae와 연결짓는 한편, connect-youngjae가 체크아웃 되어 있는 상태에서, 즉 그 브랜치에 들어와 있는 상태에서 깃헙 브랜치 youngjae 내용을 고대로 git pull origin youngjae로 불러와서? 비쥬얼 코드에 띄운 다음?, app.js에서 수정을 하고, git add . git commit -m "" 이런 걸 다하고? 다시 원래 가져왔던 브랜치인 깃헙측 브랜치인 youngjae에 다시 업로딩하는것까지 해보았습니다!
+
+## 그러면, connect-youngjae 브랜치에 체크아웃 되어 있는 상태에서, 깃헙측 브랜치인 sangwoo 브랜치를 불러온다음, 수정을 하고 난 뒤, 이걸 hangyeol 깃헙 브랜치에 업로딩 할 수는 없을까요? 가능합니다!
+
+
 
 
 
