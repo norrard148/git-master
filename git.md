@@ -128,6 +128,3 @@ checkout이 connect-youngjae로 되어 있는 지 확인
 
 
 
-
-
-
