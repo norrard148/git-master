@@ -93,8 +93,10 @@ ex) git branch --set-upstream-to origin/youngjae
 * git branch connect-youngjae
 * git checkout connect-youngjae
 * git branch --set-upstream-to origin/youngjae
-
-
+* git pull origin youngjae
+* touch app.js
+* console.log("youngjae"); 을 더 써넣습니다.
+* git 
 
 
 
