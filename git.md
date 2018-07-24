@@ -1,7 +1,7 @@
 # 무턱대고 해봅시다
 * git init
 <br><br>
-깃은 'reposiotry'라는, 일종에 자기가 깃헙 서버에 올리기 전에 로컬에 약간 중간 서버같은 느낌의 임시 저장소를 만드는데, 이것이 바로 repository이고, 위 명령어는 그 저장소인 '레파지토리를 만드는 것을 말한다.
+깃은 'reposiotry'라는, 일종에 자기가 깃헙 서버에 올리기 전에 로컬에 약간 중간 서버같은 느낌의 임시 저장소를 만드는데, 이것이 바로 repository이고, 위 명령어는 그 저장소인 레파지토리를 만드는 것을 말한다.
 
 * git remote -v
 <br><br>
@@ -16,8 +16,13 @@
 이것은, 별명이 origin이면서 주소는 "주소"인 라우터를 만들으라는 것이다.
 
 * git remote add awesome "주소"
+
 * git remote rename awesome cool
+<br>
+이것은, awesome 이라는 라우터를 cool이라는 별명으로 교체하라는 것이다.
 * git remote show cool
+<br>
+이것은, 라우터인 cool을, 조금 자세하게 설명해서 보여주라는 것이다.
 
 # 자, repository를 만들고, 그리고 그 저장소가 나중에 깃헙 어디에 올릴지를 지정해주는 remote까지 만들어보았다! 이제 우리가 해야할 것은 github에서 진짜 한번 가져와보는 것이다.
 
@@ -28,7 +33,7 @@
 그렇다는 것은! git clone과 git init 및 git remote의 기능이 무엇인지 차이를 느껴야 한다는 것!
 
 # 다음으로 넘어가서, 우리는 이제 누군가의 깃헙 프로젝트를 불러왔다. 그런데 나는 여기서 브랜치를 만들어보고 싶다!
-* 들어가기 전에 앞서, 좀 더 이야기 할 것이 있다. 아까 전에, git init으로 repository라는 일종의 '중간 서버'를 만든다고 했다(정확히는 중간 저장소). 그리고 그 중간서버가 어떻게 움직여야되는지를 알려주는 라우터기능은 'remote'가 한다고 했다. 그런데, 그 repository가 엄밀하게 말하면 local repository와 remote repository로 나뉘어져 있다. local repository는 진짜 내가 로컬인 bash 내지 기타 환경에서 작용하는 내 컴퓨터에서 만들어진 repository를 말하고, remote repository는 깃헙에 진짜 올라와져있는 깃헙 서버에서 만들어주는 repository를 말한다. 그리하여 도식은 이러하다.
+* 들어가기 전에 앞서, 좀 더 이야기 할 것이 있다. 아까 전에, git init으로 repository라는 일종의 '중간 서버'를 만든다고 했다(정확히는 중간 저장소). 그리고 그 중간서버가 어떻게 움직여야되는지를 알려주는 라우터기능은 'remote'가 한다고 했다. 그런데, 그 repository가 엄밀하게 말하면 local repository와 remote repository로 나뉘어져 있다. local repository는 로컬인 내 컴퓨터에서 만들어진 repository를 말하고, remote repository는 깃헙에 진짜 올라와져있는 깃헙 서버에서 만들어주는 repository를 말한다. 그리하여 도식은 이러하다.
 <br><br>
 내 visual code 상에 열려 있는 파일 ---> bash같은 터미널--->내 컴퓨터의 repository ---> 깃헙 서버에서 만들어준 repository ---> 깃헙 서버--->깃헙 최종 저장소(db)
 <br><br>
@@ -54,7 +59,7 @@
 <br>
 ex) git branch --set-upstream-to origin/youngjae
 <br>
-여기서 더 알아야 할 것은, <br>git branch 브랜치이름 <br>해서 만들고 난 다음 <br>git push origin 브랜치이름 <br> 으로 깃헙측 repository에 브랜치까지 만들면 자동으로 둘이가 연동된다는 것을 뜻합니다! 이것은,<br> git remote show origin <br해봐도 확인해볼 수 있습니다.
+여기서 더 알아야 할 것은, <br>git branch 브랜치이름 <br>해서 만들고 난 다음 <br>git push origin 브랜치이름 <br> 으로 깃헙측 repository에 브랜치까지 만들면 자동으로 둘이가 연동된다는 것을 뜻합니다! 이것은,<br> git remote show origin <br>해봐도 확인해볼 수 있습니다.
 
 * git checkout youngjae
 
@@ -78,7 +83,7 @@ ex) git branch --set-upstream-to origin/youngjae
 
 # 여기까지, 기본적으로 로컬 레파지토리와 깃헙 레파지토리를 만들고 그 안에 branch를 만들어 가지고 노는 법을 배워 보았다.
 
-## 이번엔, 다소 아리까리 할 수 있는 내용을 확실히 이해하고자 몇가지를 해보아야 한다. 제가 만들어 놓은 github 프로젝트를 하나 다운받아야 합니다.
+## 이번엔, 다소 아리까리 할 수 있는 내용을 확실히 이해하고자 몇가지를 해보고자 합니다. 제가 만들어 놓은 github 프로젝트를 하나 다운받아야 합니다.
 
 * git clone https://github.com/norrard148/git-master.git
 
@@ -101,12 +106,12 @@ ex) git branch --set-upstream-to origin/youngjae
 * git commit -m "md+"
 * git push origin youngjae
 <br> 이거 하면 오류 생깁니다. 왜일까요?
-<br> 그 이유는, git push 자체가 별도의 설정없이 하면 현재 체크아웃 되어 있는 로컬 브랜치랑 깃헙 레파지토리측 브랜치 이름이 '같을 때만 해주거나, 혹은 같은 놈들이 있으면 그놈끼리만 연결해서 해줍니다. 그래서 그런 것입니다. 그래서 이럴 땐,
+<br> 그 이유는, git push 자체가 별도의 설정없이 하면 현재 체크아웃 되어 있는 로컬 브랜치랑 깃헙 레파지토리측 브랜치 이름이 '같을 때만 해주거나, 혹은 같은 놈들이 있으면 그놈끼리만 연결해서 해주기 때문입니다. 그래서 그런 것입니다. 그래서 이럴 땐,
 * git push
 <br>
 해보면 안내문이 뜨는데, 여기서,
 *git push origin HEAD:youngjae
-<br>로 하라고 합니다. 이렇게 하면됩니다. 이 방법은, 사실 어느 브랜치든간에, 올리고 싶은 깃헙측 레파지토리가 있는데 지금 내가 그 레파지토리와는 이름이 다른, 다른 브랜치에 있을 때, 체크아웃되어 있는 현재의 나의 로컬 브랜치 내용을, 브랜치 영역 초월해서 업로딩해버릴 수 있는 명령어이기도 합니다.
+<br>로 하라고 합니다. 이렇게 하면됩니다. 이 방법은, 사실 어느 브랜치든간에, 올리고 싶은 깃헙측 레파지토리가 있는데 지금 내가 그 레파지토리와는 이름이 다른, 달리말해 내가 다른 브랜치에 있을 때, 체크아웃되어 있는 현재의 나의 로컬 브랜치 내용을, 브랜치 영역 초월해서 업로딩해버릴 수 있는 명령어이기도 합니다.
 
 ## 자그럼, 이로써 우리는 로컬 브랜치 connect-youngjae 라는 놈을 만들었고? 그리고 얘를 깃헙 브랜치인 youngjae와 연결짓는 한편, connect-youngjae가 체크아웃 되어 있는 상태에서, 즉 그 브랜치에 들어와 있는 상태에서 깃헙 브랜치 youngjae 내용을 고대로 git pull origin youngjae로 불러와서? 비쥬얼 코드에 띄운 다음?, app.js에서 수정을 하고, git add . git commit -m "" 이런 걸 다하고? 다시 원래 가져왔던 브랜치인 깃헙측 브랜치인 youngjae에 다시 업로딩하는것까지 해보았습니다!
 
@@ -122,7 +127,12 @@ checkout이 connect-youngjae로 되어 있는 지 확인
 * git commit -m ""
 * git push origin HEAD:hangyeol
 
-## 그 다음으로는, 새로운 로컬 브랜치를 하나 아무거나 만들어 체크아웃하고, 들어와있는 로컬 브랜치를 깃헙브랜치인 youngjae와 연동하고, sangwoo 깃헙 브랜치의 내용을 불러온 다음, 수정을 하고, 이걸 새로운 깃헙 브랜치 아무거나에 넣어보도록 합시다!
+## 그 다음으로는, 새로운 로컬 브랜치를 하나 아무거나 만들어 체크아웃하고, 들어와있는 로컬 브랜치를 깃헙브랜치인 youngjae와 연동하고, sangwoo 깃헙 브랜치의 내용을 불러온 다음, 수정을 하고, 이걸 새로운 깃헙 브랜치를 만들어 거기에 넣어보도록 합시다!
+
+
+## 이로써, 우리에게 정말 필요한 내용은 끝이 납니다. 감사합니다. 하지만 참고로 알면 좋은것 하나 더
+
+* git fetch 와 git pull 의 차이점은 무엇일까?
 
 
 
