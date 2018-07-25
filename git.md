@@ -57,10 +57,30 @@
 * cd git-master
 * git init
  
- ### 이제, 깃헙 remote repository에 있는 master, youngjae, hangyeol, sangwoo 브랜치들에 상응하는 local branch를 네개 만들고, 완전히 그것들을 동기화해봅시다. 다시말해서, 체크아웃을 하면, 각각 브랜치의 내용들이 자동으로 뜰 수 있게끔 해봅시다.
+ ### 이제, 깃헙 remote repository에 있는 master, youngjae, hangyeol, sangwoo 브랜치들에 상응하는 local branch를 네개 만들고, 완전히 그것들을 동기화해봅시다. 다시말해서, 체크아웃을 하면, 각각 브랜치의 내용들이 비쥬얼 코드에 바뀌어서 자동으로 뜰 수 있게끔 해봅시다. 정확히 각각 브랜치에 있는 내용들만 뜰 수 있도록 해야 하며, 다른 브랜치로 체크아웃했더니 이전에 있던 파일이 남아있거나 하면 안됩니다. 참고로, youngjae, hangyeol, sangwoo 브랜치엔 오직 app.js 파일 하나만 있고, master 브랜치에는 app.js, git.md, 사진1.png, 노란연필.jpg가 있습니다.
 
- *정답
- * git branch master youngjae hangyeol sangwoo
+ * 정답
+ * git branch youngjae
+ * git branch hangyeol
+ * git branch sangwoo
+ * git checkout master
+ * git pull origin master
+ * git add .
+ * git commit -m ""
+ * git checkout youngjae
+ * 모든 파일을 지웁니다.
+ * git pull origin youngjae
+ * git add .
+ * git commit -m ""
+ * git checkout hangyeol
+  * git pull origin hangyeol
+ * git add .
+ * git commit -m ""
+ * git checkout sangwoo
+  * git pull origin sangwoo
+ * git add .
+ * git commit -m ""
+
 
 
 
