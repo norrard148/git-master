@@ -58,7 +58,9 @@
 * git init
  
  ### 이제, 깃헙 remote repository에 있는 master, youngjae, hangyeol, sangwoo 브랜치들에 상응하는 local branch를 네개 만들고, 완전히 그것들을 동기화해봅시다. 다시말해서, 체크아웃을 하면, 각각 브랜치의 내용들이 자동으로 뜰 수 있게끔 해봅시다.
- 
+
+ *정답
+ * git branch master youngjae hangyeol sangwoo
 
 
 
